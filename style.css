@@ -82,7 +82,7 @@ body {
   
     .container {
       width: 70%; /* Increase container size for larger tablets */
-      max-width: 500px; /* Allow slightly wider container */
+      max-width: 700px; /* Allow slightly wider container */
       padding: 25px; /* Add more padding for larger screens */
     }
   }
