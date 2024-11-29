@@ -9,7 +9,7 @@ body {
     background: linear-gradient(135deg, #ff9a9e, #fad0c4);
     font-family: 'Arial', sans-serif;
     overflow-x: hidden; /* Prevent horizontal scrolling */
-    text-align: center; /* Ensure text is centered */
+    text-align: center; /* Center the text */
   }
   
   .container {
@@ -18,23 +18,23 @@ body {
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    width: 90%; /* Responsive width */
-    max-width: 400px; /* Limit container width */
-    word-wrap: break-word; /* Ensure text wraps within the container */
+    width: 90%; /* Default responsive width */
+    max-width: 400px; /* Limit container width on larger screens */
+    word-wrap: break-word;
   }
   
   h1 {
     color: #ff6f61;
     font-size: 2.5rem;
-    line-height: 1.2; /* Improve spacing between lines */
-    word-wrap: break-word; /* Allow long words to wrap */
-    margin: 0 auto; /* Center the title */
+    line-height: 1.2;
+    word-wrap: break-word;
+    margin: 0 auto;
   }
   
   p {
     color: #555;
     font-size: 1.2rem;
-    line-height: 1.6; /* Better readability */
+    line-height: 1.6;
     margin: 10px 0;
   }
   
@@ -70,24 +70,49 @@ body {
     background: #ff856c;
   }
   
-  /* Media Queries for Responsive Design */
+  /* Media Queries for Tablets and iPads */
+  @media screen and (min-width: 600px) and (max-width: 900px) {
+    h1 {
+      font-size: 2.2rem; /* Slightly smaller font for tablets */
+    }
+  
+    p {
+      font-size: 1.1rem; /* Adjust paragraph size */
+    }
+  
+    .container {
+      width: 70%; /* Increase container size for larger tablets */
+      max-width: 500px; /* Allow slightly wider container */
+      padding: 25px; /* Add more padding for larger screens */
+    }
+  }
+  
+  /* Media Queries for iPhones (Smaller Widths) */
   @media screen and (max-width: 600px) {
     h1 {
-      font-size: 2rem; /* Reduce font size for smaller screens */
+      font-size: 2rem;
     }
   
     p {
       font-size: 1rem;
     }
   
+    .container {
+      width: 85%; /* Slightly smaller width to reveal more background */
+      max-width: 350px; /* Ensure it's not too wide */
+      padding: 15px; /* Reduce padding for smaller devices */
+    }
+  
     button {
       font-size: 0.9rem;
+      padding: 8px 16px; /* Adjust button size */
     }
   }
   
+  /* Media Queries for Very Small Screens (e.g., iPhone SE) */
   @media screen and (max-width: 400px) {
     h1 {
-      font-size: 1.8rem; /* Further reduce font size for very small screens */
+      font-size: 1.8rem;
     }
   
     p {
@@ -95,11 +120,13 @@ body {
     }
   
     .container {
-      padding: 15px; /* Adjust padding for smaller devices */
+      width: 80%; /* Even smaller container for very narrow screens */
+      max-width: 320px;
+      padding: 10px; /* Compact padding for very small screens */
     }
   
     button {
-      padding: 8px 16px;
+      padding: 6px 12px; /* Adjust button padding */
       font-size: 0.85rem;
     }
   }
